@@ -2,8 +2,8 @@ title: Nighthawk Pages
 description: "Class of 2025"
 owner_name: Hanlun Li
 github_username: hanlunli
-github_repo: "student-2025" 
-baseurl: "/student-2025"
+github_repo: "hanlun-2025" 
+baseurl: "/hanlun-2025"
 future: true
 remote_theme: jekyll/minima
 minima:
