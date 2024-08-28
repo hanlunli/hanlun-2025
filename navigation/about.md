@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Creator of Student 2025
+i love coding rahhhh
+
+coding is coding rahhh
