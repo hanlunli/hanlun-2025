@@ -1,7 +1,24 @@
 ---
-layout: page 
+layout: default 
 ---
 
+<style> body { background-color: #121212; color: #7e92d6; } 
+  p{font-family: sans-serif;}
+  hr{background-color: #7e92d6;}
+  .color{color:#7e92d6;}
+  body {
+    padding: 25px;
+    background-color: #282b30;
+    color: #7e92d6;
+    font-size: 16px;
+    transition-duration: 0.2s;
+  }
+</style>
+<p style="font-size: 30px;font-weight: bold;">Blogs</p>
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 <!-- This inserts content from the page using this layout -->
 {{ content | markdownify }}
 
@@ -46,3 +63,4 @@ layout: page
     {%- endfor -%}
   </ul>
 {%- endif -%}
+</div>

@@ -1,4 +1,3 @@
-title: Nighthawk Pages 
 description: "Class of 2025"
 owner_name: Hanlun Li
 github_username: hanlunli
@@ -8,10 +7,6 @@ future: true
 # remote_theme: jekyll/minima
 minima:
   skin: dark
-  social_links:
-    - { platform: github, user_url: "https://github.com/nighthawkcoders"}
-    - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
-    - { platform: youtube, user_url: "https://www.youtube.com/@nighthawkcodingsociety2868" } 
 # remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
