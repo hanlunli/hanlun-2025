@@ -34,8 +34,6 @@ hide: true
 
 
 <script>
-
-var IsLoggedIn1 = "true";
 function myFunction() {
   var element = document.body;
   element.classList.toggle("dark-mode");
