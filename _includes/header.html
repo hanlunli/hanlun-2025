@@ -1,0 +1,174 @@
+
+<style>
+    .site-header {
+    font-family: monospace;
+    font-size: 15px;
+    
+    position: absolute;
+    transition: top 0.2s ease-in-out;
+    margin-top: 25px;
+    padding-top: 10px;
+    left: -115px;
+    margin-top: 275px;
+  }
+.circular_image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: blue;
+  position:absolute;
+
+  /* commented for demo
+  float: left;
+  margin-left: 125px;
+  margin-top: 20px;
+  */
+  
+  /*for demo*/
+  display:inline-block;
+  vertical-align:middle;
+}
+img{
+    position:relative;
+    border: 1px solid;
+    border-color: #7e92d6;
+  }
+
+.pfp {
+  border-radius: 50%;
+  position:absolute;
+  left: -75px;
+}
+.headerbutton {
+  border: 1px solid #5f73b8;
+  background: #424549;
+  color: white;
+  width: 270px;
+  padding: 15px 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  font-family: serif;
+}
+.headerbutton:hover{
+  background:  #7e92d6;
+  /* color: rgb(78, 3, 66); */
+}
+.backgroundbutton {
+    border: 2px solid #121212;
+    background:  #7e92d6;
+    color: white;
+    width: 100px;
+    /* padding: 15px 20px; */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    font-family: serif;
+  }
+  .backgroundbutton:hover{
+    background: #424549;
+    /* color: rgb(78, 3, 66); */
+  }
+
+</style>
+<style> body { background-color: #121212; color: #7e92d6; } 
+  p{font-family: sans-serif;}
+  hr{background-color: #7e92d6;}
+  .color{color:#7e92d6;}
+  body {
+    padding: 25px;
+    background-color: #121212;
+    color: #7e92d6;
+    font-size: 16px;
+    transition-duration: 0.2s;
+  }
+  hr{background-color: #7e92d6;}
+  .dark-mode {
+    background-color: white;
+    color: black;
+    transition-duration: 0.2s;
+  }
+  .bar-dark{background-color: black}
+  .table-dark{color: black}
+  
+  .border-dark {
+    border: 1px solid black;
+  }
+  .cells-dark {
+    width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+  }
+  .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 2px;
+    }
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #7e92d6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+</style>
+
+
+<script>
+  
+var IsLoggedIn1 = "true";
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  var elem = document.querySelectorAll("#border");
+  elem.forEach(function(border) {
+    border.classList.toggle("border-dark");
+    });
+  var bars = document.querySelectorAll("#bar");
+  bars.forEach(function(bar) {
+    bar.classList.toggle("bar-dark");
+    });
+  var cellz = document.querySelectorAll("#cells");
+  cellz.forEach(function(cells) {
+    cells.classList.toggle("cell");
+    cells.classList.toggle("cells-dark");
+    });
+  var tables = document.querySelectorAll("#table");
+  tables.forEach(function(table) {
+    // table.classList.toggle("myTable")
+    table.classList.toggle("table-dark");
+    });
+}
+</script>
+
+<img id="border" src="{{site.baseurl}}/images/mypfp.png" alt='me' class="pfp">
+<header class="site-header">
+  <div id="header">
+    <nav>
+      <ul>
+        <button id="border"class="headerbutton" onclick="myFunction()" style="width:160px;padding: 5px 10px;font-weight:bold;left:23.5%;position:relative;">Dark Mode</button>  
+        <br>
+        <br>
+        <button id="border"type="button" class="headerbutton" onclick="window.location.href='{{site.baseurl}}/';">Home</button> <br \>
+        <button id="border"type="button" class="headerbutton" onclick="window.location.href='{{ site.github.repository_url }}#readme';">View On Github</button>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header>
