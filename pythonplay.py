@@ -1,17 +1,24 @@
-import newspaper
-import requests
-from newspaper import fulltext
-fox_paper = newspaper.build('http://cnn.com')
-# title_dict = {}
-for article in fox_paper.articles:
-    print(article.url)
-    html = requests.get(article.url).text
-    text = fulltext(html)
-    print(text)
-#     for word in article.text:
-#         for i in title_dict.keys():
-#             if word == i:
-#                 title_dict[i] += 1
-#             else:
-#                 title_dict.update({i, 0})
-# print(title_dict)
+from emoji import emojize
+import wikipedia
+import random
+page_title = '3069677'
+monkey = wikipedia.page(pageid = page_title)
+monkey_article_words = [i for i in monkey.content.split()]
+
+monkeylist = ['ape', 'apes', 'monkey', 'monkeys', 'gorilla', 'orangutan', 'chimpanzee', 'baboon', 'gorillas', 'orangutans', 'chimpanzees', 'chimps', 'chimp', 'baboons']
+monkey_emojis = [
+    ":monkey_face:",  # 🐵
+    ":monkey:",       # 🐒
+    ":see_no_evil:",  # 🙈
+    ":hear_no_evil:", # 🙉
+    ":speak_no_evil:",# 🙊
+    ":gorilla:",      # 🦍
+    ":orangutan:"     # 🦧
+]
+# print(monkey.content, monkey.url)
+
+for i in monkey_article_words:
+    if i.lower() in monkeylist:
+        print(emojize(monkey_emojis[random.randint(0, len(monkey_emojis)-1)]), end = " ")
+    else:
+        print(i, end = " ")
