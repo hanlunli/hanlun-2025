@@ -18,7 +18,10 @@ monkey_emojis = [
 # print(monkey.content, monkey.url)
 
 for i in monkey_article_words:
-    if i.lower() in monkeylist or i[:-1].lower() in monkeylist or i[1:-1].lower() in monkeylist or i[1:-2].lower() in monkeylist:
+    if (i.lower() in monkeylist 
+        or i[:-1].lower() in monkeylist 
+        or i[1:-1].lower() in monkeylist 
+        or i[1:-2].lower() in monkeylist):
         print(emojize(monkey_emojis[random.randint(0, len(monkey_emojis)-1)], language='alias'), end = " ")
     else:
         print(i, end = " ")
