@@ -3,6 +3,7 @@ layout: default
 title: Student Home 
 description: Home Page
 hide: true
+comments: true
 ---
 
 <style>
@@ -30,6 +31,47 @@ hide: true
       justify-content: center;
       font-size: 24px;
       cursor: pointer;
+         }
+  .notebooks {
+      display: none;
+      margin-top: 10px;
+    }
+    .notebooks a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: blue;
+    }
+    .category {
+        border: 1px solid #5f73b8;
+        background: #424549;
+        color: white;
+        width: 270px;
+        padding: 15px 20px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        transition-duration: 0.1s;
+        cursor: pointer;
+        font-family: serif;
+    }
+    .category:hover {
+      background-color: #7e92d6;
+    }
+    .submenu {
+      display: none;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+    .submenu a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: green;
+    }
+
 </style>
 
 
@@ -67,7 +109,37 @@ can't wait for another year of code code coding
 
 <div id="imageContainer"></div>
 
+
+
+<div id="notebooks-container" class="category">Open Notebooks</div>
+
+<div id="notebooks" class="notebooks">
+  <button onclick="window.location.href='{{site.baseurl}}/planning'" class="category">Planning</button>
+  <button onclick="window.location.href='{{site.baseurl}}/javascript'" class="category">Javascript</button>
+  <button onclick="window.location.href='{{site.baseurl}}/about_pages'" 
+  class="category">About Pages</button>
+
+</div>
+
 <script>
+    const categoryDiv = document.getElementById('notebooks-container');
+    const notebooksDiv = document.getElementById('notebooks');
+    const submenuDiv = document.getElementById('submenu');
+
+    categoryDiv.addEventListener('click', function() {
+      if (notebooksDiv.style.display === 'none' || notebooksDiv.style.display === '') {
+        notebooksDiv.style.display = 'block';
+      } else {
+        notebooksDiv.style.display = 'none';
+        submenuDiv.style.display = 'none';
+      }
+    });
+    const categoryItems = notebooksDiv.querySelectorAll('.category');
+    categoryItems.forEach(item => {
+      item.addEventListener('click', function() {
+        submenuDiv.style.display = 'block';
+      });
+    });
 function toggleImage() {
     const imageContainer = document.getElementById("imageContainer");
     if (imageContainer.innerHTML === "") {
