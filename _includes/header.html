@@ -82,6 +82,12 @@ img{
 </style>
 <style> body { background-color: #121212; color: #7e92d6; } 
   p{font-family: sans-serif;}
+  .h2 {
+    color:#7e92d6;
+  }
+  .h2-dark{
+    color:black;
+  }
   hr{background-color: #7e92d6;}
   .color{color:#7e92d6;}
   body {
@@ -154,6 +160,11 @@ function myFunction() {
   tables.forEach(function(table) {
     // table.classList.toggle("myTable")
     table.classList.toggle("table-dark");
+    });
+  var h2 = document.querySelectorAll("#h2");
+  h2.forEach(function(h2) {
+    // table.classList.toggle("myTable")
+    h2.classList.toggle("h2-dark");
     });
 }
 </script>
