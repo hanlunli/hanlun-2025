@@ -4,5 +4,3 @@ pyyaml
 notebook
 requests
 python-dotenv
-emoji
-wikipedia
