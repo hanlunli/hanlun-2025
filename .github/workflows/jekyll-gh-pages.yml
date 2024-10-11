@@ -2,11 +2,8 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -32,10 +29,16 @@ jobs:
           python-version: '3.x'
       - name: Create and activate virtual environment
         run: |
+          set -e
           python -m venv venv
           source venv/bin/activate
           pip install --upgrade pip
           pip install nbconvert  # Add any other necessary package installations here
+      - name: Check Python version and installed packages
+        run: |
+          source venv/bin/activate
+          python --version
+          pip list
       - name: Execute conversion script
         run: |
           source venv/bin/activate
