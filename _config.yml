@@ -24,3 +24,7 @@ header_pages:
   - navigation/search.md
   - navigation/about.md
   - README4YML.md
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
