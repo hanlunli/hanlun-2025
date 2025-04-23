@@ -5,35 +5,128 @@ permalink: /CSA_Teamteach_Retrospective
 comments: True
 ---
 
-## Primitive Types
-- Topics include variables, data types (int, double, boolean), arithmetic operators, type casting, and constants.
-- Common issues: Integer division confusion, precision with double, and incorrect casting
+# Collegeboard 10 Units
 
-KEY LEARNING POINTS:
+## Unit 1: Primitive Types
+- Topics include variables, data types (`int`, `double`, `boolean`), arithmetic operators, type casting, and constants.
+- Common issues: Integer division confusion, precision with `double`, and incorrect casting.
+
+**KEY LEARNING POINTS:**
 - Understand how data is stored and manipulated.
 - Always remember integer division truncates; use casting for accurate results.
 - Know the limits of each primitive type and when to use them.
 
-## Recursion
-- ONLY EXIST ON THE MC
-- Definition: when a function calls itself to solve small instances of the same problem
+---
+
+## Unit 2: Using Objects
+- Topics: Creating objects, calling methods, `String` operations, `Math` class, wrapper classes, autoboxing.
+- Common issues: Confusion between static vs. instance methods, using `new` vs. built-in methods, `.equals()` vs `==`.
+
+**KEY LEARNING POINTS:**
+- Strings are immutable and should be compared with `.equals()`.
+- Know how to use object method calls like `str.length()` and `Math.random()`.
+- Understand what happens under the hood with autoboxing and object references.
+
+---
+
+## Unit 3: Boolean Expressions and if Statements
+- Topics: Boolean logic (`&&`, `||`, `!`), `if`, `else if`, `else`, De Morgan’s Law.
+- Common issues: Incorrect logical comparisons, brackets misuse, nested conditions.
+
+**KEY LEARNING POINTS:**
+- Practice truth tables to master boolean logic.
+- Always use parentheses for clarity in complex conditions.
+- Use `else if` for mutually exclusive conditions to avoid bugs.
+
+---
+
+## Unit 4: Iteration
+- Topics: `for`, `while`, and `do-while` loops, loop control variables, infinite loops, nested loops.
+- Common issues: Off-by-one errors, forgetting loop updates, infinite loops from bad conditions.
+
+**KEY LEARNING POINTS:**
+- Choose the right loop type for the problem.
+- Know the standard counting loop and how to exit correctly.
+- Practice tracing loops to predict output.
+
+---
+
+## Unit 5: Writing Classes
+- Topics: Defining classes, instance variables, constructors, accessor/mutator methods, `this` keyword.
+- Common issues: Forgetting constructors, confusing instance and local variables.
+
+**KEY LEARNING POINTS:**
+- Understand encapsulation: keep fields private, use getters/setters.
+- `this` refers to the current object’s context — use it when necessary.
+- Constructors initialize object state and can be overloaded.
+
+---
+
+## Unit 6: Array
+- Topics: 1D arrays, declaring, initializing, traversing, common patterns (sum, count, max, min).
+- Common issues: Index out-of-bounds errors, off-by-one errors.
+
+**KEY LEARNING POINTS:**
+- Arrays are zero-indexed — first element is at index 0.
+- Use loops to traverse and manipulate arrays.
+- Use enhanced `for-each` loops when you don't need the index.
+
+---
+
+## Unit 7: ArrayList
+- Topics: `ArrayList` methods (`add`, `remove`, `get`, `set`, `size`), generics, dynamic resizing.
+- Common issues: Index shifting when removing elements during iteration, incorrect use of `.get()` and `.set()`.
+
+**KEY LEARNING POINTS:**
+- `ArrayList` is a resizable array; index-based like normal arrays but with built-in methods.
+- Always check bounds when accessing/modifying elements.
+- Avoid modifying the list while iterating unless using an iterator.
+
+---
+
+## Unit 8: 2D Array
+- Topics: Declaring, initializing, and traversing 2D arrays, nested loops, row-major order.
+- Common issues: Mixing up rows and columns, accessing invalid indices.
+
+**KEY LEARNING POINTS:**
+- Use nested loops to traverse all elements: outer loop for rows, inner for columns.
+- Practice patterns like checking diagonals, boundaries, and neighbors.
+- Understand how 2D arrays are arrays of arrays (`arr[row][col]`).
+
+---
+
+## Unit 9: Inheritance
+- Topics: Superclass, subclass, `super`, method overriding, polymorphism, dynamic binding.
+- Common issues: Not understanding method overriding vs. overloading, calling parent constructors incorrectly.
+
+**KEY LEARNING POINTS:**
+- A subclass inherits all public/protected members of the superclass.
+- Use `super()` to call parent constructor; `super.method()` to call parent method.
+- Polymorphism allows you to use a superclass reference for subclass objects.
+
+---
+
+## Unit 10: Recursion
+- **ONLY EXISTS ON THE MC**
+- Definition: When a function calls itself to solve smaller instances of the same problem.
 - Base Case: Essential for stopping recursion; without it, the function will cause a stack overflow.
 - Recursive Case: The function reduces the problem into a smaller instance of itself.
 - Stack Usage: Recursive calls use the call stack, leading to higher memory usage compared to iteration.
 - Efficiency: Some problems (like tree traversal and backtracking) are naturally suited for recursion.
 - Risk of Infinite Recursion: If the base case is missing or incorrect, recursion will not terminate.
-Concept: A divide-and-conquer sorting algorithm that splits, sorts, and merges arrays.
 
-- MERGE SORT:
-   - Concept: A divide-and-conquer sorting algorithm that splits, sorts, and merges arrays.
-   - Recursive Splitting: The array is split into left and right halves recursively until each sub-array has one element.
-   - Time Complexity: Always O(n log n), making it faster than O(n²) sorting algorithms like bubble sort.
-   - Merge Function Details: Uses two temporary arrays (leftArray and rightArray), then merges them back into the original array.
+- **MERGE SORT**:
+  - Concept: A divide-and-conquer sorting algorithm that splits, sorts, and merges arrays.
+  - Recursive Splitting: The array is split into left and right halves recursively until each sub-array has one element.
+  - Time Complexity: Always O(n log n), making it faster than O(n²) sorting algorithms like bubble sort.
+  - Merge Function Details: Uses two temporary arrays (leftArray and rightArray), then merges them back into the original array.
 
-KEY LEARNING POINTS: 
+**KEY LEARNING POINTS:**
+- For the College Board exam, recursion is tested in multiple-choice questions, focusing on understanding return values and tracing recursive calls.
+- Key concepts include base cases, recursive cases, and stack usage.
+- Common problems: factorial, sum of digits, binary search (O(log n)), and merge sort (O(n log n)).
 
-- For the collegeboard exam, recursion is tested in multiple-choice questions, focusing on understanding return values and tracing recursive calls. Key concepts include base cases, recursive cases, and stack usage, with common problems like factorial, sum of digits, binary search (O(log n)), and merge sort (O(n log n)). 
-
+# FRQ Types
 ## Methods and Control Structures
 - Importance: 
    - Reusable code that performs specific tasks
