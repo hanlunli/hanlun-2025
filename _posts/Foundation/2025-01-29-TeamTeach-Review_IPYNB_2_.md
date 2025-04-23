@@ -5,6 +5,15 @@ permalink: /CSA_Teamteach_Retrospective
 comments: True
 ---
 
+## Primitive Types
+- Topics include variables, data types (int, double, boolean), arithmetic operators, type casting, and constants.
+- Common issues: Integer division confusion, precision with double, and incorrect casting
+
+KEY LEARNING POINTS:
+- Understand how data is stored and manipulated.
+- Always remember integer division truncates; use casting for accurate results.
+- Know the limits of each primitive type and when to use them.
+
 ## Recursion
 - ONLY EXIST ON THE MC
 - Definition: when a function calls itself to solve small instances of the same problem
@@ -24,9 +33,6 @@ Concept: A divide-and-conquer sorting algorithm that splits, sorts, and merges a
 KEY LEARNING POINTS: 
 
 - For the collegeboard exam, recursion is tested in multiple-choice questions, focusing on understanding return values and tracing recursive calls. Key concepts include base cases, recursive cases, and stack usage, with common problems like factorial, sum of digits, binary search (O(log n)), and merge sort (O(n log n)). 
-
-
-
 
 ## Methods and Control Structures
 - Importance: 
